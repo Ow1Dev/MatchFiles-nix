@@ -40,6 +40,7 @@
 
     imports = [
       ./packages
+      ./apps
     ];
   };
 } 
