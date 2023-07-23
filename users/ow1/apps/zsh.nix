@@ -26,7 +26,6 @@
     '';
 
     profileExtra = ''
-      eval "$(starship init zsh)"
     '';
 
     plugins = [
