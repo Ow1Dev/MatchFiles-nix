@@ -5,6 +5,8 @@
 { config, pkgs, ... }:
 
 {
+  imports = [./hardware-configuration.nix]; 
+
   services.xserver.desktopManager.xterm.enable = false;
 
   environment.systemPackages = with pkgs; [
