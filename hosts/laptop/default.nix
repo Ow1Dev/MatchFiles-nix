@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [./hardware-configuration.nix]; 
+  imports = [./hardware-configuration.nix ../../users/ow1]; 
 
   services.xserver.desktopManager.xterm.enable = false;
 
@@ -54,6 +54,7 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   programs.hyprland.enable = true;
+  programs.zsh.enable = true;
 
   # Configure keymap in X11
   services.xserver = {
@@ -76,22 +77,6 @@
     alsa.enable = true;
     alsa.support32Bit = true;
     pulse.enable = true;
-  };
-
-
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.ow1 = {
-    isNormalUser = true;
-    description = "ow1";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      firefox
-      kitty
-      wofi
-      waybar
-      pcmanfm
-    #  thunderbird
-    ];
   };
 
   # Security 

@@ -3,9 +3,12 @@
   
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+    };
   };
 
-  outputs = { nixpkgs, ... }@inputs: 
+  outputs = { nixpkgs, home-manager, ... }@inputs: 
     let
       system = "x86_64-linux"; #current system
       pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
@@ -22,6 +25,11 @@
             # Hardware config (bootloader, kernel modules, filesystems, etc)
             # DO NOT USE MY HARDWARE CONFIG!! USE YOUR OWN!!
             (./. + "/hosts/${hostname}")
+            home-manager.nixosModules.home-manager
+            {
+               home-manager.useGlobalPkgs = true;
+               home-manager.useUserPackages = true;
+            }
           ];
           specialArgs = { inherit inputs; };
         };
