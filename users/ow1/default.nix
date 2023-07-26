@@ -39,6 +39,7 @@
     _module.args = { inherit inputs; };
 
     imports = [
+      ./env.nix
       ./packages
       ./apps
     ];
