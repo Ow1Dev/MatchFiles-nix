@@ -7,7 +7,6 @@
     packages = with pkgs; [
       firefox
       kitty
-      wofi
       waybar
       pcmanfm
     ];
