@@ -4,6 +4,13 @@
   lib,
   ...
 }: {
+  home.packages = with pkgs; [
+    hyprpaper
+    brightnessctl
+    wl-clipboard
+  ];
+
+
   wayland.windowManager.hyprland = {
     enable = true;
     extraConfig = builtins.readFile ../confs/hypr/hyprland.conf;

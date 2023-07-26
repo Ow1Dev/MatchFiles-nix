@@ -21,7 +21,6 @@
       home-manager
       pipewire
       pulseaudio
-      hyprpaper
       zsh
     ];
 
