@@ -6,7 +6,6 @@
     home = "/home/ow1";
     packages = with pkgs; [
       firefox
-      kitty
       waybar
       pcmanfm
     ];
