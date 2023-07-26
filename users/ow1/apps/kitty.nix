@@ -8,6 +8,7 @@
         enable = true;
         settings = {
             confirm_os_window_close=0;
+            window_padding_width="10.0";
 
             # The basic colors
             foreground="#C6D0F5";
