@@ -4,7 +4,10 @@
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [glib]; # gsettings
+  home.packages = with pkgs; [
+       glib
+  ]; # gsettings
+
   xdg.systemDirs.data = let
     schema = pkgs.gsettings-desktop-schemas;
   in ["${schema}/share/gsettings-schemas/${schema.name}"];
@@ -12,10 +15,12 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Mocha-Standard-Pink-Dark";
+      name = "Catppuccin-Macchiato-Compact-Pink-dark";
       package = pkgs.catppuccin-gtk.override {
-        accents = ["pink"];
-        variant = "mocha";
+        accents = [ "pink" ];
+        size = "compact";
+        tweaks = [ "rimless" "black" ];
+        variant = "frappe";
       };
     };
     iconTheme = {

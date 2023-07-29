@@ -5,8 +5,9 @@
   ...
 }: {
     home.packages = with pkgs; [
-	neovim-unwrapped
-	zsh
+        neovim-unwrapped
+        zsh
         starship
+        dconf
     ];
 }
