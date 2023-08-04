@@ -12,7 +12,7 @@
   environment.systemPackages = with pkgs; [
      vim 
      git
-     vscode    
+     htop
   ];
 
   fonts.fonts = with pkgs; [
