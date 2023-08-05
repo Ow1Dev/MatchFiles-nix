@@ -5,14 +5,14 @@
 { config, pkgs, ... }:
 
 {
-  imports = [./hardware-configuration.nix ../../users/ow1]; 
+  imports = [ ./hardware-configuration.nix ../../users/ow1 ];
 
   services.xserver.desktopManager.xterm.enable = false;
 
   environment.systemPackages = with pkgs; [
-     vim 
-     git
-     htop
+    vim
+    git
+    htop
   ];
 
   fonts.fonts = with pkgs; [
@@ -22,9 +22,9 @@
   # Bootloader.
   boot = {
     loader = {
-	grub.enable = true;
-	grub.device = "/dev/sda";
-	grub.useOSProber = true;
+      grub.enable = true;
+      grub.device = "/dev/sda";
+      grub.useOSProber = true;
     };
   };
 
@@ -101,20 +101,20 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
 
-    # Set environment variables
-    environment.variables = {
-        NIXOS_CONFIG = "$HOME/nixos/configuration.nix";
-        NIXOS_CONFIG_DIR = "$HOME/nixos/";
-        XDG_DATA_HOME = "$HOME/.local/share";
-        PASSWORD_STORE_DIR = "$HOME/.local/share/password-store";
-        GTK_RC_FILES = "$HOME/.local/share/gtk-1.0/gtkrc";
-        GTK2_RC_FILES = "$HOME/.local/share/gtk-2.0/gtkrc";
-        MOZ_ENABLE_WAYLAND = "1";
-        EDITOR = "vim";
-        DIRENV_LOG_FORMAT = "";
-        ANKI_WAYLAND = "1";
-        DISABLE_QT5_COMPAT = "0";
-    };
+  # Set environment variables
+  environment.variables = {
+    NIXOS_CONFIG = "$HOME/nixos/configuration.nix";
+    NIXOS_CONFIG_DIR = "$HOME/nixos/";
+    XDG_DATA_HOME = "$HOME/.local/share";
+    PASSWORD_STORE_DIR = "$HOME/.local/share/password-store";
+    GTK_RC_FILES = "$HOME/.local/share/gtk-1.0/gtkrc";
+    GTK2_RC_FILES = "$HOME/.local/share/gtk-2.0/gtkrc";
+    MOZ_ENABLE_WAYLAND = "1";
+    EDITOR = "vim";
+    DIRENV_LOG_FORMAT = "";
+    ANKI_WAYLAND = "1";
+    DISABLE_QT5_COMPAT = "0";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

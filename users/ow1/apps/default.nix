@@ -1,16 +1,17 @@
-{
-  config,
-  pkgs,
-  lib,
-  ...
-}: let
+{ config
+, pkgs
+, lib
+, ...
+}:
+let
   filterNixFiles = k: v: v == "regular" && k != "default.nix" && lib.hasSuffix ".nix" k;
   importNixFiles = path: filter:
     with lib;
-      (lists.forEach (mapAttrsToList (name: _: path + ("/" + name))
-          (filterAttrs filter (builtins.readDir path))))
+    (lists.forEach (mapAttrsToList (name: _: path + ("/" + name))
+      (filterAttrs filter (builtins.readDir path))))
       import;
-in {
+in
+{
   imports = importNixFiles ../apps filterNixFiles;
 }
 

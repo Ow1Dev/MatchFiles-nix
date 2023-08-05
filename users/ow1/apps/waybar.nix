@@ -1,9 +1,8 @@
-{
-  config,
-  pkgs,
-  lib,
-  inputs,
-  ...
+{ config
+, pkgs
+, lib
+, inputs
+, ...
 }: {
   programs.waybar = {
     enable = true;
@@ -11,24 +10,24 @@
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = ["hyprland/workspaces"];
-        modules-center = [];
-        modules-right = ["pulseaudio" "network" "battery" "clock" "tray"];
+        modules-left = [ "hyprland/workspaces" ];
+        modules-center = [ ];
+        modules-right = [ "pulseaudio" "network" "battery" "clock" "tray" ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;
           sort-by-name = true;
           format = "{icon}";
-          format-icons = {default = "";};
+          format-icons = { default = ""; };
         };
 
         pulseaudio = {
           format = " {icon} ";
           format-muted = "󰝟";
-          format-icons = ["" "󰕾" ""];
+          format-icons = [ "" "󰕾" "" ];
           tooltip = true;
           tooltip-format = "{volume}%";
-	  on-click = "amixer set Master toggle";
+          on-click = "amixer set Master toggle";
         };
 
         network = {
@@ -42,7 +41,7 @@
         backlight = {
           device = "intel_backlight";
           format = "{icon}";
-          format-icons = ["" "" "" "" "" "" "" "" ""];
+          format-icons = [ "" "" "" "" "" "" "" "" "" ];
           tooltip = true;
           tooltip-format = "{percent}%";
         };
@@ -55,7 +54,7 @@
           format = "{icon}";
           format-charging = "󰂄";
           format-plugged = "󰂄";
-          format-icons = ["󰂎" "󰁺" "󰁻" "󰁼" "󰁼" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+          format-icons = [ "󰂎" "󰁺" "󰁻" "󰁼" "󰁼" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
           tooltip = true;
           tooltip-format = "{capacity}%";
         };

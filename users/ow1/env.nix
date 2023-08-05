@@ -1,8 +1,7 @@
-{
-  config,
-  pkgs,
-  inputs,
-  ...
+{ config
+, pkgs
+, inputs
+, ...
 }: {
   xdg.configFile."nix/inputs/nixpkgs".source = inputs.nixpkgs.outPath;
   nix.registry.nixpkgs.flake = inputs.nixpkgs;

@@ -5,16 +5,16 @@
   xdg.configFile."nvim".source = ../confs/nvim;
 
   home.packages = with pkgs; [
-     # languages
-     rustc
+    # languages
+    rustc
 
-     ripgrep
-     lazygit
+    ripgrep
+    lazygit
 
-     # tools:
-     nodejs
-     gcc
-     cargo
+    # tools:
+    nodejs
+    gcc
+    cargo
   ];
 
   programs.neovim = {

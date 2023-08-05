@@ -1,13 +1,14 @@
-{
-  pkgs,
-  config,
-  inputs,
-  ...
+{ pkgs
+, config
+, inputs
+, ...
 }: {
-  home.packages = with pkgs; [glib]; # gsettings
-  xdg.systemDirs.data = let
-    schema = pkgs.gsettings-desktop-schemas;
-  in ["${schema}/share/gsettings-schemas/${schema.name}"];
+  home.packages = with pkgs; [ glib ]; # gsettings
+  xdg.systemDirs.data =
+    let
+      schema = pkgs.gsettings-desktop-schemas;
+    in
+    [ "${schema}/share/gsettings-schemas/${schema.name}" ];
 
   gtk = {
     enable = true;
@@ -36,7 +37,7 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
-      gtk-application-prefer-dark-theme=0;
+      gtk-application-prefer-dark-theme = 0;
     };
     gtk2.extraConfig = ''
       gtk-xft-antialias=1

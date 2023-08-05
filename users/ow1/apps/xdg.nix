@@ -1,11 +1,10 @@
 # XDG settings
-{
-  config,
-  lib,
-  pkgs,
-  ...
+{ config
+, lib
+, pkgs
+, ...
 }: {
-  home.packages = with pkgs; [xdg-utils];
+  home.packages = with pkgs; [ xdg-utils ];
   xdg = {
     userDirs = {
       enable = true;
@@ -25,7 +24,7 @@
 
     mimeApps = {
       enable = true;
-      defaultApplications = {"text/html" = ["firefox.desktop"];};
+      defaultApplications = { "text/html" = [ "firefox.desktop" ]; };
     };
 
     stateHome = "${config.home.homeDirectory}/.local/state";

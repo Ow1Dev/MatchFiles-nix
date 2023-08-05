@@ -1,4 +1,4 @@
-{ config , pkgs , lib , inputs , ...  }: 
+{ config, pkgs, lib, inputs, ... }:
 {
   users.users.ow1 = {
     isNormalUser = true;
@@ -10,7 +10,7 @@
       pcmanfm
     ];
     shell = pkgs.zsh;
-  };  
+  };
 
   environment = {
     shells = [ pkgs.zsh ];
