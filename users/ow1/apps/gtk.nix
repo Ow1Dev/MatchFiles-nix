@@ -4,10 +4,7 @@
   inputs,
   ...
 }: {
-  home.packages = with pkgs; [
-       glib
-  ]; # gsettings
-
+  home.packages = with pkgs; [glib]; # gsettings
   xdg.systemDirs.data = let
     schema = pkgs.gsettings-desktop-schemas;
   in ["${schema}/share/gsettings-schemas/${schema.name}"];
@@ -39,6 +36,7 @@
       gtk-xft-hinting = 1;
       gtk-xft-hintstyle = "hintslight";
       gtk-xft-rgba = "rgb";
+      gtk-application-prefer-dark-theme=0;
     };
     gtk2.extraConfig = ''
       gtk-xft-antialias=1
@@ -46,6 +44,12 @@
       gtk-xft-hintstyle="hintslight"
       gtk-xft-rgba="rgb"
     '';
+  };
+
+  dconf.settings = {
+    "org/gnome/desktop/interface" = {
+      gtk-theme = "Catppuccin-Macchiato-Compact-Pink-dark";
+    };
   };
 
   # cursor theme
