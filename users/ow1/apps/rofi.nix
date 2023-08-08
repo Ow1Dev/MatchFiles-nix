@@ -22,7 +22,7 @@ in
       modi = "drun";
       icon-theme = "Papirus-Dark";
       show-icons = true;
-      terminal = "foot";
+      terminal = "kitty";
       location = 0;
       disable-history = false;
       hide-scrollbar = true;
