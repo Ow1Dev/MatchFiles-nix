@@ -10,13 +10,6 @@
 
   outputs = { nixpkgs, home-manager, ... }@inputs:
     let
-      system = "x86_64-linux"; #current system
-      pkgs = inputs.nixpkgs.legacyPackages.x86_64-linux;
-      lib = nixpkgs.lib;
-
-      # This lets us reuse the code to "create" a system
-      # Credits go to sioodmy on this one!
-      # https://github.com/sioodmy/dotfiles/blob/main/flake.nix
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
           system = system;
