@@ -13,7 +13,7 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Catppuccin-Macchiato-Compact-Pink-dark";
+      name = "Generated";
       package = pkgs.catppuccin-gtk.override {
         accents = [ "pink" ];
         size = "compact";
@@ -47,11 +47,7 @@
     '';
   };
 
-  dconf.settings = {
-    "org/gnome/desktop/interface" = {
-      gtk-theme = "Catppuccin-Macchiato-Compact-Pink-dark";
-    };
-  };
+  home.sessionVariables.GTK_THEME = "Generated";
 
   # cursor theme
   home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaPink}/share/icons/Catppuccin-Mocha-Pink-Cursors";
