@@ -3,7 +3,7 @@
 , ...
 }: {
   home.packages = with pkgs; [
-   jetbrains.rider
-   dotnet-sdk_7
- ];
+    jetbrains.rider
+    dotnet-sdk_7
+  ];
 }

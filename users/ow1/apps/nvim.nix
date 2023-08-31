@@ -12,36 +12,36 @@
     enable = true;
 
     plugins = with pkgs; [
-        # languages
-        vimPlugins.nvim-lspconfig
-        vimPlugins.nvim-treesitter.withAllGrammars
-        vimPlugins.rust-tools-nvim
+      # languages
+      vimPlugins.nvim-lspconfig
+      vimPlugins.nvim-treesitter.withAllGrammars
+      vimPlugins.rust-tools-nvim
 
-        # Autocompletion
-        vimPlugins.nvim-cmp
-        vimPlugins.cmp-buffer
-        vimPlugins.cmp-path
-        vimPlugins.cmp-nvim-lsp
-        vimPlugins.cmp-nvim-lua
+      # Autocompletion
+      vimPlugins.nvim-cmp
+      vimPlugins.cmp-buffer
+      vimPlugins.cmp-path
+      vimPlugins.cmp-nvim-lsp
+      vimPlugins.cmp-nvim-lua
 
-        # telescope
-        vimPlugins.plenary-nvim
-        vimPlugins.popup-nvim
-        vimPlugins.telescope-nvim
+      # telescope
+      vimPlugins.plenary-nvim
+      vimPlugins.popup-nvim
+      vimPlugins.telescope-nvim
 
-          # theme
-        vimPlugins.catppuccin-nvim
+      # theme
+      vimPlugins.catppuccin-nvim
 
-          # floaterm
-        vimPlugins.vim-floaterm
+      # floaterm
+      vimPlugins.vim-floaterm
 
-          # extras
-        vimPlugins.gitsigns-nvim
-        vimPlugins.lualine-nvim
-        vimPlugins.nerdcommenter
-        vimPlugins.nvim-colorizer-lua
-        vimPlugins.nvim-treesitter-context
-        vimPlugins.nvim-ts-rainbow2
+      # extras
+      vimPlugins.gitsigns-nvim
+      vimPlugins.lualine-nvim
+      vimPlugins.nerdcommenter
+      vimPlugins.nvim-colorizer-lua
+      vimPlugins.nvim-treesitter-context
+      vimPlugins.nvim-ts-rainbow2
     ];
 
     extraConfig = ''
