@@ -1,3 +1,1 @@
-require("ow1")
-
-vim.cmd.colorscheme("catppuccin-frappe")
+require 'Ow1Dev'.init()
