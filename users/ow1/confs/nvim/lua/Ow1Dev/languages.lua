@@ -137,7 +137,10 @@ local function init()
 
     cmp.setup({
         sources = {
+            { name = 'buffer' },
+            { name = 'path' },
             { name = 'nvim_lsp' },
+            { name = 'luasnip' },
         },
         mapping = {
             ['<C-y>'] = cmp.mapping.confirm({ select = true }),
