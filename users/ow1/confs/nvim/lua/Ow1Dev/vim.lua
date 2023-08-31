@@ -14,6 +14,11 @@ local function set_vim_o()
         tabstop = 4,
         termguicolors = true,
         updatetime = 300,
+
+        swapfile = false,
+        backup = false,
+        undodir = os.getenv("HOME") .. "/.vim/undodir",
+        undofile = true,
     }
 
     for k, v in pairs(settings) do

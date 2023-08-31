@@ -27,9 +27,6 @@ local function on_attach(client, buffer)
 
     local opts = { buffer = buffer, remap = false }
 
-    -- Enable completion triggered by <c-x><c-o>
-    vim.bo[buffer].omnifunc = 'v:lua.vim.lsp.omnifunc'
-
     vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
     vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
