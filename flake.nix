@@ -6,23 +6,24 @@
     home-manager = {
       url = "github:nix-community/home-manager";
     };
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { nixpkgs, home-manager, ... }@inputs:
+  outputs = { nixpkgs, home-manager, hyprland, ... }@inputs:
     let
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
           system = system;
           modules = [
             { networking.hostName = hostname; }
-            # Hardware config (bootloader, kernel modules, filesystems, etc)
-            # DO NOT USE MY HARDWARE CONFIG!! USE YOUR OWN!!
             (./. + "/hosts/${hostname}")
             home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
             }
+            hyprland.nixosModules.default
+            { programs.hyprland.enable = true; }
           ];
           specialArgs = { inherit inputs; };
         };

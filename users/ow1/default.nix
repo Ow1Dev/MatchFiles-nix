@@ -37,6 +37,8 @@
     _module.args = { inherit inputs; };
 
     imports = [
+      inputs.hyprland.homeManagerModules.default
+
       ./env.nix
       ./packages
       ./apps
