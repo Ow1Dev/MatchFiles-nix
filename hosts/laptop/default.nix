@@ -120,6 +120,15 @@
     DISABLE_QT5_COMPAT = "0";
   };
 
+  virtualisation = {
+    podman = {
+      defaultNetwork.settings.dns_enabled = true;
+      dockerCompat = true;
+      enable = true;
+      extraPackages = with pkgs; [ zfs ];
+    };
+  };
+
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave

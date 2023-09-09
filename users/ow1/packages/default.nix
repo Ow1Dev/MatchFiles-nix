@@ -7,5 +7,6 @@
     neovim-unwrapped
     zsh
     starship
+    docker-compose
   ];
 }
