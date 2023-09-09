@@ -7,6 +7,5 @@
     neovim-unwrapped
     zsh
     starship
-    dconf
   ];
 }
