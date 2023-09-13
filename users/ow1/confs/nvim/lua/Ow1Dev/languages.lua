@@ -89,6 +89,13 @@ local function init()
                 },
             }
         },
+        gopls = {
+            settings = {
+                gopls = {
+                    gofumpt = true,
+                },
+            },
+        },
         nil_ls = {
             settings = {
                 ['nil'] = {

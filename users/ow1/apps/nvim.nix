@@ -56,6 +56,7 @@
       rustc
 
       # language servers
+      gopls
       lua-language-server
       nil
       nodePackages."diagnostic-languageserver"
