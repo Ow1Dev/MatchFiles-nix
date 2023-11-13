@@ -15,6 +15,7 @@
     XCURSOR_SIZE = "34";
     NIX_PATH = "nixpkgs=${config.xdg.configHome}/nix/inputs/nixpkgs$\{NIX_PATH:+:$NIX_PATH}";
     TLDR_CACHE_DIR = config.xdg.cacheHome;
+    DOTNET_ROOT = "${pkgs.dotnet-sdk}";
   };
 
   # disable man pages
