@@ -4,7 +4,8 @@
 }: {
   home.packages = with pkgs; [
     jetbrains.rider
-    dotnet-sdk_7
-    dotnet-sdk_6
+    dotnet-sdk
+    nodejs_20
+    nodePackages.pnpm
   ];
 }

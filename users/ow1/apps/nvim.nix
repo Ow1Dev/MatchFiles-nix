@@ -64,6 +64,7 @@
       nodePackages."typescript-language-server"
       nodePackages."vscode-langservers-extracted"
       nodePackages."yaml-language-server"
+      nodePackages."svelte-language-server"
       rust-analyzer
 
       # formatters

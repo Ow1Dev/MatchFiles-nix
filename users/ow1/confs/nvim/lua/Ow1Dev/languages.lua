@@ -104,6 +104,7 @@ local function init()
             }
         },
         tsserver = {},
+        svelte = {},
         yamlls = {
             settings = {
                 yaml = {
