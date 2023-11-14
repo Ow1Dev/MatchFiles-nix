@@ -8,6 +8,16 @@
     lazygit
   ];
 
+  home.file = {
+    ".omnisharp/omnisharp.json".text = ''
+      {
+        "RoslynExtensionsOptions": {
+          "enableDecompilationSupport": true
+        }
+      }
+    '';
+  };
+
   programs.neovim = {
     enable = true;
 
