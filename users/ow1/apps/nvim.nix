@@ -65,6 +65,7 @@
       nodePackages."vscode-langservers-extracted"
       nodePackages."yaml-language-server"
       nodePackages."svelte-language-server"
+      omnisharp-roslyn
       rust-analyzer
 
       # formatters

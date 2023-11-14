@@ -16,6 +16,7 @@
     NIX_PATH = "nixpkgs=${config.xdg.configHome}/nix/inputs/nixpkgs$\{NIX_PATH:+:$NIX_PATH}";
     TLDR_CACHE_DIR = config.xdg.cacheHome;
     DOTNET_ROOT = "${pkgs.dotnet-sdk}";
+    OMNISHARP_LANGUAGE_SERVER = "${pkgs.omnisharp-roslyn}"; # todo this need to go some where else
   };
 
   # disable man pages

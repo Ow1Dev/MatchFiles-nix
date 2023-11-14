@@ -69,6 +69,14 @@ local function init()
         },
     }
 
+    -- CSharp specific setup
+    local os = require('os')
+    local omnisharp_server_location = os.getenv('OMNISHARP_LANGUAGE_SERVER')
+    lspconfig.omnisharp.setup({
+        on_attach = on_attach,
+        cmd = { "dotnet", omnisharp_server_location .. "/lib/omnisharp-roslyn/OmniSharp.dll" },
+     })
+
     local language_servers = {
         html = {},
         lua_ls = {
