@@ -23,7 +23,7 @@
     '';
 
     initExtra = ''
-        export PATH=$HOME/.dotnet/tools:$PATH
+      export PATH=$HOME/.dotnet/tools:$PATH
     '';
 
     profileExtra = ''
