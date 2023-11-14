@@ -14,6 +14,7 @@
       nix-switch = "doas nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos#laptop";
       nix-rollback = "doas nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos#laptop --rollback";
       cpf = "wl-copy <";
+      lg = "lazygit";
 
       # Modern unix
       sudo = "doas $@";
