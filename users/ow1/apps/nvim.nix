@@ -16,6 +16,7 @@
       vimPlugins.nvim-lspconfig
       vimPlugins.nvim-treesitter.withAllGrammars
       vimPlugins.rust-tools-nvim
+      vimPlugins.omnisharp-extended-lsp-nvim
 
       # Autocompletion
       vimPlugins.nvim-cmp

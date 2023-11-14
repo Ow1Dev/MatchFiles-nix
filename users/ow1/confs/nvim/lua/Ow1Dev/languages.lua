@@ -73,9 +73,12 @@ local function init()
     local os = require('os')
     local omnisharp_server_location = os.getenv('OMNISHARP_LANGUAGE_SERVER')
     lspconfig.omnisharp.setup({
+        handlers = {
+            ["textDocument/definition"] = require('omnisharp_extended').handler,
+        },
         on_attach = on_attach,
         cmd = { "dotnet", omnisharp_server_location .. "/lib/omnisharp-roslyn/OmniSharp.dll" },
-     })
+    })
 
     local language_servers = {
         html = {},
