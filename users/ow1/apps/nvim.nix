@@ -35,6 +35,11 @@
       vimPlugins.cmp-nvim-lsp
       vimPlugins.cmp-nvim-lua
 
+      #Snippets
+      vimPlugins.luasnip
+      vimPlugins.cmp_luasnip
+      vimPlugins.friendly-snippets
+
       # telescope
       vimPlugins.plenary-nvim
       vimPlugins.popup-nvim

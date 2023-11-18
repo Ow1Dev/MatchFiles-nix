@@ -153,6 +153,9 @@ local function init()
 
     treesitter_context.setup()
 
+    -- luasnip setup
+    local luasnip = require 'luasnip'
+    require("luasnip.loaders.from_vscode").lazy_load()
 
     cmp.setup({
         sources = {
@@ -166,18 +169,22 @@ local function init()
             ['<C-e>'] = cmp.mapping.abort(),
             ['<C-u>'] = cmp.mapping.scroll_docs(-4),
             ['<C-d>'] = cmp.mapping.scroll_docs(4),
-            ['<C-p>'] = cmp.mapping(function()
+            ['<C-p>'] = cmp.mapping(function(fallback)
                 if cmp.visible() then
-                    cmp.select_prev_item(cmp_select_opts)
+                    cmp.select_prev_item()
+                elseif luasnip.jumpable(-1) then
+                    luasnip.jump(-1)
                 else
-                    cmp.complete()
+                    fallback()
                 end
             end),
-            ['<C-n>'] = cmp.mapping(function()
+            ['<C-n>'] = cmp.mapping(function(fallback)
                 if cmp.visible() then
-                    cmp.select_next_item(cmp_select_opts)
+                    cmp.select_next_item()
+                elseif luasnip.expand_or_jumpable() then
+                    luasnip.expand_or_jump()
                 else
-                    cmp.complete()
+                    fallback()
                 end
             end),
         },
