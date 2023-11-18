@@ -13,6 +13,8 @@
     '';
     shell = "${pkgs.zsh}/bin/zsh";
     terminal = "xterm-256color";
+    customPaneNavigationAndResize = true;
+    keyMode = "vi";
   };
 
 }
