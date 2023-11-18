@@ -8,5 +8,7 @@
     zsh
     starship
     docker-compose
+
+    httpie
   ];
 }
