@@ -15,7 +15,7 @@
     theme = {
       name = "Generated";
       package = pkgs.catppuccin-gtk.override {
-        accents = [ "pink" ];
+        accents = [ "green" ];
         size = "compact";
         tweaks = [ "rimless" ];
         variant = "frappe";
@@ -24,7 +24,7 @@
     iconTheme = {
       package = pkgs.catppuccin-papirus-folders.override {
         flavor = "mocha";
-        accent = "pink";
+        accent = "green";
       };
       name = "Papirus-Dark";
     };
@@ -50,6 +50,6 @@
   home.sessionVariables.GTK_THEME = "Generated";
 
   # cursor theme
-  home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaPink}/share/icons/Catppuccin-Mocha-Pink-Cursors";
+  home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaGreen}/share/icons/Catppuccin-Mocha-Green-Cursors";
 }
 
