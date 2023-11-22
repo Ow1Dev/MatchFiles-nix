@@ -15,7 +15,7 @@
     htop
   ];
 
-  fonts.fonts = with pkgs; [
+  fonts.packages = with pkgs; [
     nerdfonts
   ];
 
@@ -58,6 +58,7 @@
 
   xdg.portal = {
     enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 
   # Configure keymap in X11
