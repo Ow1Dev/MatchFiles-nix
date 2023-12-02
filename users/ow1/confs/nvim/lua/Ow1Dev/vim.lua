@@ -54,6 +54,7 @@ local function set_vim_keymaps()
     map('n', '<leader>j', '<CMD>wincmd j<CR>', options)
     map('n', '<leader>k', '<CMD>wincmd k<CR>', options)
     map('n', '<leader>l', '<CMD>wincmd l<CR>', options)
+    map('n', '<leader>/', '<CMD>nohls<return>', options)
     vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 end
 
