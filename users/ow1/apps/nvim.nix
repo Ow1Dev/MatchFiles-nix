@@ -57,7 +57,6 @@
       vimPlugins.nerdcommenter
       vimPlugins.nvim-colorizer-lua
       vimPlugins.nvim-treesitter-context
-      vimPlugins.nvim-ts-rainbow2
     ];
 
     extraConfig = ''
