@@ -95,6 +95,7 @@
       # formatters
       nixpkgs-fmt
       rustfmt
+      stylua
 
       # tools
       cargo
