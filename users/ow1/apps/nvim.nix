@@ -62,6 +62,7 @@
       vimPlugins.nerdcommenter
       vimPlugins.nvim-colorizer-lua
       vimPlugins.nvim-treesitter-context
+      vimPlugins.nvim-tree-lua
     ];
 
     extraConfig = ''
