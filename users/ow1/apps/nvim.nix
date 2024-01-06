@@ -25,6 +25,7 @@
       # languages
       vimPlugins.nvim-lspconfig
       vimPlugins.nvim-treesitter.withAllGrammars
+      vimPlugins.none-ls-nvim
       vimPlugins.rust-tools-nvim
       vimPlugins.omnisharp-extended-lsp-nvim
 
