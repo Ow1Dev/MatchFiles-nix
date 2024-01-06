@@ -6,6 +6,7 @@ null_ls.setup {
   debug = true,
   sources = {
     formatting.stylua,
+    formatting.nixpkgs_fmt,
     null_ls.builtins.completion.spell,
   },
 }
