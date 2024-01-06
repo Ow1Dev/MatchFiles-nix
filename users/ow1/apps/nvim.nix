@@ -34,6 +34,8 @@
       vimPlugins.cmp-path
       vimPlugins.cmp-nvim-lsp
       vimPlugins.cmp-nvim-lua
+      vimPlugins.cmp-emoji
+      vimPlugins.nvim-autopairs
 
       #Snippets
       vimPlugins.luasnip
@@ -44,14 +46,17 @@
       vimPlugins.plenary-nvim
       vimPlugins.popup-nvim
       vimPlugins.telescope-nvim
+      vimPlugins.telescope-fzf-native-nvim
 
       # theme
       vimPlugins.catppuccin-nvim
+      vimPlugins.nvim-web-devicons
 
       # floaterm
       vimPlugins.vim-floaterm
 
       # extras
+      vimPlugins.which-key-nvim
       vimPlugins.gitsigns-nvim
       vimPlugins.lualine-nvim
       vimPlugins.nerdcommenter

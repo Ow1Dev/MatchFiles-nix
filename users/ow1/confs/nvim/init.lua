@@ -1,1 +1,9 @@
-require 'Ow1Dev'.init()
+require "user.options"
+require "user.keymaps"
+require "user.colorscheme"
+require "user.treesitter"
+require "user.lspconfig"
+require "user.cmp"
+require "user.telescope"
+require "user.whichkey"
+require "user.lualine"
