@@ -66,6 +66,7 @@ local servers = {
   "tsserver",
   "svelte",
   "yamlls",
+  "rust_analyzer",
 }
 
 local default_diagnostic_config = {
