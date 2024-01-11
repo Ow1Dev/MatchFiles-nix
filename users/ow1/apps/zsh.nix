@@ -16,6 +16,8 @@
       cpf = "wl-copy <";
       lg = "lazygit";
 
+      ls = "eza --git --icons $@";
+
       # Modern unix
       sudo = "doas $@";
     };

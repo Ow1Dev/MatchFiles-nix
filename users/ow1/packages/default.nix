@@ -10,5 +10,6 @@
     docker-compose
 
     httpie
+    eza
   ];
 }
