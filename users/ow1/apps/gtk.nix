@@ -13,13 +13,13 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Generated";
-      package = pkgs.catppuccin-gtk.override {
-        accents = [ "green" ];
-        size = "compact";
-        tweaks = [ "rimless" ];
-        variant = "frappe";
-      };
+      package = (
+        pkgs.catppuccin-gtk.override { 
+          accents = [ "green" ];
+          size = "standard";
+          variant = "frappe"; 
+        });
+      name = "Catppuccin-Frappe-Standard-Green-Dark";
     };
     iconTheme = {
       package = pkgs.catppuccin-papirus-folders.override {
@@ -47,9 +47,8 @@
     '';
   };
 
-  home.sessionVariables.GTK_THEME = "Generated";
+  home.sessionVariables.GTK_THEME = "Catppuccin-Frappe-Standard-Green-Dark";
 
   # cursor theme
   home.file.".icons/default".source = "${pkgs.catppuccin-cursors.mochaGreen}/share/icons/Catppuccin-Mocha-Green-Cursors";
 }
-
