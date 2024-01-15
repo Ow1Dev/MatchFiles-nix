@@ -8,6 +8,7 @@
     zsh
     starship
     docker-compose
+    unzip
 
     httpie
     eza
