@@ -66,6 +66,7 @@
       vimPlugins.nvim-tree-lua
       vimPlugins.comment-nvim
       vimPlugins.nvim-ts-context-commentstring
+      vimPlugins.neogit
     ];
 
     extraConfig = ''
