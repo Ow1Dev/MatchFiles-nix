@@ -10,9 +10,9 @@
       mainBar = {
         layer = "top";
         position = "top";
-        modules-left = [ "hyprland/workspaces" ];
-        modules-center = [ ];
-        modules-right = [ "pulseaudio" "network" "battery" "clock" "tray" ];
+        modules-left = [ "clock" ];
+        modules-center = [ "hyprland/workspaces" ];
+        modules-right = [ "pulseaudio" "network" "battery"  "tray" ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;

@@ -7,17 +7,17 @@
 }
 
 window#waybar {
-  background: @base;
+  background-color: transparent;
 }
 
 #workspaces {
   border-radius: 1rem;
-  background-color: @surface0;
+  padding: 0px 5px;
   margin: 0px 3px 0px 7px;
 }
 
 #workspaces button {
-  color: @pink;
+  color: @green;
   border-radius: 1rem;
   padding-left: 6px;
   margin: 5px 0;
@@ -27,24 +27,22 @@ window#waybar {
 }
 
 #workspaces button.active {
-  color: @flamingo;
+  color: @teal;
   border-radius: 1rem;
 }
 
 #workspaces button:hover {
-  color: @rosewater;
+  color: @green;
   border-radius: 1rem;
 }
 
 #tray,
 #network,
 #backlight,
-#clock,
 #battery,
 #pulseaudio,
 #custom-lock,
 #custom-power {
-  background-color: @surface0;
   margin: 0px 3px 0px 7px;
   padding: 10px 5px 10px 5px;
   border-radius: 1rem;
@@ -52,6 +50,7 @@ window#waybar {
 
 #clock {
   color: @lavender;
+  font-size: 15px;
 }
 
 #battery {
@@ -88,6 +87,21 @@ window#waybar {
 
 .modules-right {
   background-color: @surface0;
+  padding: 0px 5px;
+  border-radius: 1rem;
+  margin: 0 5px;
+}
+
+.modules-center {
+  background-color: @surface0;
+  padding: 0px 5px;
+  border-radius: 1rem;
+  margin: 0 5px;
+}
+
+.modules-left {
+  background-color: @surface0;
+  padding: 0px 10px;
   border-radius: 1rem;
   margin: 0 5px;
 }
