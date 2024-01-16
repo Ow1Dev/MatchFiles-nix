@@ -1,6 +1,17 @@
-{ pkgs
-, ...
-}: {
+{ pkgs , ... }: 
+
+let
+   netrw = pkgs.vimUtils.buildVimPlugin {
+    name = "netrw";
+    src = pkgs.fetchFromGitHub {
+      owner = "prichrd";
+      repo = "netrw.nvim";
+      rev = "e6e1dda74dcda63972b5bb136bc4df5771d99039";
+      hash = "sha256-a7DZw33p/ZRZAM4WmaK8CSym5905nakTPZFfU8YduGM=";
+    };
+  }; 
+in 
+{
   xdg.configFile."nvim".source = ./conf;
 
   home.packages = with pkgs; [
@@ -68,6 +79,7 @@
       vimPlugins.nvim-ts-context-commentstring
       vimPlugins.neogit
       vimPlugins.harpoon
+      netrw
     ];
 
     extraConfig = ''
