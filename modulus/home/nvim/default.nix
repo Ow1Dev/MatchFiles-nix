@@ -67,6 +67,7 @@
       vimPlugins.comment-nvim
       vimPlugins.nvim-ts-context-commentstring
       vimPlugins.neogit
+      vimPlugins.harpoon
     ];
 
     extraConfig = ''
