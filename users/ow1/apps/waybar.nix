@@ -12,7 +12,7 @@
         position = "top";
         modules-left = [ "clock" ];
         modules-center = [ "hyprland/workspaces" ];
-        modules-right = [ "pulseaudio" "network" "battery"  "tray" ];
+        modules-right = [ "pulseaudio" "network" "battery" "tray" ];
 
         "hyprland/workspaces" = {
           disable-scroll = true;

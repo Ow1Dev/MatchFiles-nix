@@ -14,10 +14,10 @@
     enable = true;
     theme = {
       package = (
-        pkgs.catppuccin-gtk.override { 
+        pkgs.catppuccin-gtk.override {
           accents = [ "green" ];
           size = "standard";
-          variant = "frappe"; 
+          variant = "frappe";
         });
       name = "Catppuccin-Frappe-Standard-Green-Dark";
     };
