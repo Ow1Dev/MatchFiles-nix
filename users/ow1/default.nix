@@ -42,6 +42,7 @@
       ./env.nix
       ./packages
       ./apps
+      ../../modulus/home/nvim
     ];
   };
 } 

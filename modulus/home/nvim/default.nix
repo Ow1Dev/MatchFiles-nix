@@ -1,7 +1,7 @@
 { pkgs
 , ...
 }: {
-  xdg.configFile."nvim".source = ../confs/nvim;
+  xdg.configFile."nvim".source = ./conf;
 
   home.packages = with pkgs; [
     ripgrep
