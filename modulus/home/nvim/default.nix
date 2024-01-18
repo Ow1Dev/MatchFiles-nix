@@ -79,6 +79,9 @@ in
       vimPlugins.nvim-ts-context-commentstring
       vimPlugins.neogit
       vimPlugins.harpoon
+      vimPlugins.nvim-colorizer-lua
+
+      # custom
       netrw
     ];
 
