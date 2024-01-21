@@ -43,6 +43,7 @@
       ./packages
       ./apps
       ../../modulus/home/nvim
+      ../../modulus/home/waybar
     ];
   };
 } 

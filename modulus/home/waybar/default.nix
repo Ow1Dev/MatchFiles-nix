@@ -103,9 +103,9 @@
       };
     };
 
-    style = builtins.readFile ../confs/waybar/style.css;
+    style = builtins.readFile ./conf/style.css;
   };
 
   xdg.configFile."waybar/frappe.css".text =
-    builtins.readFile ../confs/waybar/frappe.css;
+    builtins.readFile ./conf/frappe.css;
 }
