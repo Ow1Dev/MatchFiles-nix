@@ -26,9 +26,9 @@ in
 
   wayland.windowManager.hyprland = {
     enable = true;
-    extraConfig = builtins.readFile ../confs/hypr/hyprland.conf;
+    extraConfig = builtins.readFile ./confs/hyprland.conf;
   };
 
   xdg.configFile."hypr/hyprpaper.conf".text =
-    builtins.readFile ../confs/hypr/hyprpaper.conf;
+    builtins.readFile ./confs/hyprpaper.conf;
 }
