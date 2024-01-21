@@ -1,4 +1,4 @@
-/* =============================================================================
+/* ===========================================================================
  *
  * Waybar configuration
  *
@@ -13,8 +13,8 @@
 @import "frappe.css";
 
 /* -----------------------------------------------------------------------------
-  * Base styles
-  * -------------------------------------------------------------------------- */
+   * Base styles
+   * -------------------------------------------------------------------------- */
 
 /* Reset all styles */
 
@@ -25,55 +25,53 @@
     font-family: UbuntuMono;
     font-size: 18px;
     font-weight: bold;
+    transition: all 0.5s ease;
 }
 
 window#waybar {
-    border: 0px solid rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
+    border-bottom: 4px solid shade(@base, 1.1);
+    background-color: shade(#1e1e2e, 0.95);
 }
 
 #workspaces button {
     color: @base;
     border-radius: 50%;
     margin: 0px 0px;
-    padding: 4 6 2 0;
+    padding: 2 6 2 0;
+}
+
+#workspaces button:hover * {
+    color: @green;
 }
 
 #workspaces button:hover {
-    color: @mauve;
+    color: @green;
     box-shadow: none;
-    /* Remove predefined box-shadow */
     text-shadow: none;
-    /* Remove predefined text-shadow */
     border: 0px;
     background: none;
 }
 
-#workspaces button:hover * {
-    color: @mauve;
-    background-color: @mantle;
-}
-
 #workspaces * {
-    color: whitesmoke;
+    color: @surface1;
 }
 
 #workspaces {
     border-style: solid;
-    background-color: @mantle;
+    background-color: @base;
     opacity: 1;
     border-radius: 10px;
     margin: 8px 0px 8px 8px;
-    padding: 5px 8px;
+    padding: 0 6;
 }
 
 #workspaces button.active {
-    color: @mauve;
+    color: @green;
     border-radius: 20px;
 }
 
 #workspaces button.active * {
-    color: @mauve;
+    color: @green;
 }
 
 #mode {
@@ -82,6 +80,7 @@ window#waybar {
 
 #clock,
 #custom-swap,
+#custom-background,
 #custom-cava-internal,
 #battery,
 #cpu,
@@ -96,21 +95,32 @@ window#waybar {
 #tray,
 #custom-power,
 #custom-pacman,
-#custom-launcher,
 #mpd {
     padding: 5px 8px;
     border-style: solid;
-    background-color: @mantle;
+    background-color: shade(@base, 1.1);
     opacity: 1;
     margin: 8px 0;
 }
 
 /* -----------------------------------------------------------------------------
-  * Module styles
-  * -------------------------------------------------------------------------- */
+   * Module styles
+   * -------------------------------------------------------------------------- */
+
+#mode {
+    border-radius: 10px;
+    color: @green;
+    margin-right: 5px;
+}
+
+#custom-cava-internal {
+    border-radius: 10px;
+    color: @green;
+}
+
 #mpd {
     border-radius: 10px;
-    color: @mauve;
+    color: @green;
     margin-left: 5px;
     background-color: rgba(0, 0, 0, 0);
 }
@@ -140,26 +150,21 @@ window#waybar {
     font-size: 14px;
 }
 
-#mode {
-    border-radius: 10px;
-    color: @mauve;
-    margin-right: 5px;
-}
-
-#custom-cava-internal {
-    border-radius: 10px;
-    color: @mauve;
-}
-
 #custom-swap {
     border-radius: 10px;
     color: @base;
-    margin-left: 15px;
-    background-color: @mauve;
+    margin-left: 10px;
+    background-color: @green;
+}
+
+#custom-background {
+    border-radius: 0px 10px 10px 0px;
+    background-color: @base;
+    color: white;
+    padding: 5px 14px 5px 5px;
 }
 
 #clock {
-    /* background-color:#a3be8c; */
     color: @sky;
     border-radius: 10px;
     margin: 8px 10px;
@@ -167,32 +172,27 @@ window#waybar {
 
 #backlight {
     color: @yellow;
-    /* border-bottom: 2px solid @yellow; */
     border-radius: 10px 0 0 10px;
 }
 
 #battery {
     color: #d8dee9;
-    /* border-bottom: 2px solid #d8dee9; */
     border-radius: 0 10px 10px 0;
     margin-right: 10px;
 }
 
 #battery.charging {
     color: #81a1c1;
-    /* border-bottom: 2px solid #81a1c1; */
 }
 
 @keyframes blink {
     to {
         color: @red;
-        /* border-bottom: 2px solid @red; */
     }
 }
 
 #battery.critical:not(.charging) {
     color: #bf616a;
-    /* border-bottom: 2px solid #bf616a; */
     animation-name: blink;
     animation-duration: 0.5s;
     animation-timing-function: linear;
@@ -202,7 +202,6 @@ window#waybar {
 
 #cpu {
     color: @sky;
-    /* border-bottom: 2px solid @sky; */
 }
 
 #cpu #cpu-icon {
@@ -215,40 +214,33 @@ window#waybar {
 
 #network.disabled {
     color: #bf616a;
-    /* border-bottom: 2px solid #bf616a; */
 }
 
 #network {
     color: @green;
-    /* border-bottom: 2px solid @green; */
     border-radius: 10px;
     margin-right: 5px;
 }
 
 #network.disconnected {
     color: #bf616a;
-    /* border-bottom: 2px solid #bf616a; */
 }
 
 #pulseaudio {
     color: @flamingo;
-    /* border-bottom: 2px solid @flamingo; */
 }
 
 #pulseaudio.muted {
     color: #3b4252;
-    /* border-bottom: 2px solid #3b4252; */
 }
 
 #temperature {
     color: @teal;
-    /* border-bottom: 2px solid @teal; */
     border-radius: 10px 0 0 10px;
 }
 
 #temperature.critical {
     color: @red;
-    /* border-bottom: 2px solid @red; */
 }
 
 #idle_inhibitor {
@@ -257,7 +249,6 @@ window#waybar {
 }
 
 #tray {
-    /* background-color: @base; */
     margin: 8px 10px;
     border-radius: 10px;
 }
@@ -266,11 +257,10 @@ window#waybar {
 #custom-power {}
 
 #custom-launcher {
-    background-color: @mauve;
-    color: @base;
-    border-radius: 10px;
-    padding: 5px 10px;
-    margin-left: 15px;
+    background-color: shade(@base, 1.1);
+    color: @green;
+    border-radius: 0px 15px 0px 0px;
+    padding: 5px 10px 5px 10px;
 }
 
 #custom-power {

@@ -62,7 +62,9 @@
             critical = 15;
           };
           format = "{icon}  {capacity: >3}%";
-          format-icons = [ "" "" "" "" "" ];
+          format-icons = [ "󰁺" "󰁼" "󰁾" "󰂀" "󰁹" ];
+          format-charging = "󰂄 charging";
+          format-plugged = "󰂄 charging";
         };
 
         network = {
