@@ -20,6 +20,7 @@ in
     hyprpaper
     brightnessctl
     wl-clipboard
+    networkmanagerapplet
     screenshotScript
   ];
 
@@ -31,4 +32,6 @@ in
 
   xdg.configFile."hypr/hyprpaper.conf".text =
     builtins.readFile ./confs/hyprpaper.conf;
+
+  xdg.configFile."hypr/scripts".source = ./scripts;
 }
