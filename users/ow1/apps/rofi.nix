@@ -19,17 +19,20 @@ in
       pkgs.rofi-wayland.overrideAttrs
         (oldAttrs: { mesonFlags = [ "-Dxcb=disabled" ]; });
     extraConfig = {
-      modi = "drun";
+      modi = "run,drun,window";
       icon-theme = "Papirus-Dark";
       show-icons = true;
       terminal = "kitty";
+      drun-display-format = "{icon} {name}";
       location = 0;
       disable-history = false;
       hide-scrollbar = true;
+      display-drun = "   Apps ";
+      display-run = "   Run ";
+      display-window = " 﩯  Window";
+      display-Network = " 󰤨  Network";
       sidebar-mode = true;
       font = "FantasqueSansMono Nerd Font 14";
-      display-drun = "Apps";
-      drun-display-format = "{name}";
     };
     theme =
       let
@@ -37,16 +40,16 @@ in
       in
       {
         "*" = {
-          bg-col = mkLiteral "#24273a";
-          bg-col-light = mkLiteral "#24273a";
-          border-col = mkLiteral "#363a4f";
-          selected-col = mkLiteral "#24273a";
-          pink = mkLiteral "#f5c2e7";
-          fg-col = mkLiteral "#cad3f5";
-          fg-col2 = mkLiteral "@pink";
-          grey = mkLiteral "#6e738d";
+          bg-col = mkLiteral "#303446";
+          bg-col-light = mkLiteral "#303446";
+          border-col = mkLiteral "#303446";
+          selected-col = mkLiteral "#303446";
+          green = mkLiteral "#a6d189";
+          fg-col = mkLiteral "#c6d0f5";
+          fg-col2 = mkLiteral "#e78284";
+          grey = mkLiteral "#e78284";
 
-          width = mkLiteral "450px";
+          width = mkLiteral "600";
         };
 
         "element-text, element-icon , mode-switcher" = {
@@ -55,27 +58,28 @@ in
         };
 
         "window" = {
-          height = mkLiteral "500px";
+          height = mkLiteral "360px";
           border = mkLiteral "3px";
-          border-radius = mkLiteral "15px";
           border-color = mkLiteral "@border-col";
           background-color = mkLiteral "@bg-col";
         };
 
-        "mainbox" = { background-color = mkLiteral "@bg-col"; };
+        "mainbox" = {
+          background-color = mkLiteral "@bg-col";
+        };
 
         inputbar = {
           children = mkLiteral "[prompt,entry]";
           background-color = mkLiteral "@bg-col";
-          border-radius = mkLiteral "15px";
+          border-radius = mkLiteral "5px";
           padding = mkLiteral "2px";
         };
 
         prompt = {
-          background-color = mkLiteral "@pink";
+          background-color = mkLiteral "@green";
           padding = mkLiteral "6px";
           text-color = mkLiteral "@bg-col";
-          border-radius = mkLiteral "15px";
+          border-radius = mkLiteral "3px";
           margin = mkLiteral "20px 0px 0px 20px";
         };
 
@@ -95,8 +99,8 @@ in
           border = mkLiteral "0px 0px 0px";
           padding = mkLiteral "6px 0px 0px";
           margin = mkLiteral "10px 0px 0px 20px";
-          columns = 1;
-          lines = 10;
+          columns = 2;
+          lines = 5;
           background-color = mkLiteral "@bg-col";
         };
 
@@ -106,14 +110,18 @@ in
           text-color = mkLiteral "@fg-col";
         };
 
-        element-icon = { size = mkLiteral "25px"; };
+        element-icon = {
+          size = mkLiteral "25px";
+        };
 
         "element selected" = {
           background-color = mkLiteral "@selected-col";
           text-color = mkLiteral "@fg-col2";
         };
 
-        mode-switcher = { spacing = 0; };
+        mode-switcher = {
+          spacing = 0;
+        };
 
         button = {
           padding = mkLiteral "10px";
@@ -125,7 +133,21 @@ in
 
         "button selected" = {
           background-color = mkLiteral "@bg-col";
-          text-color = mkLiteral "@pink";
+          text-color = mkLiteral "@green";
+        };
+
+        message = {
+          background-color = mkLiteral "@bg-col-light";
+          margin = mkLiteral "2px";
+          padding = mkLiteral "2px";
+          border-radius = mkLiteral "5px";
+        };
+
+        textbox = {
+          padding = mkLiteral "6px";
+          margin = mkLiteral "20px 0px 0px 20px";
+          text-color = mkLiteral "@green";
+          background-color = mkLiteral "@bg-col-light";
         };
       };
   };
