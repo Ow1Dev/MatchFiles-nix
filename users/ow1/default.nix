@@ -49,6 +49,7 @@
       ../../modulus/home/rofi
       ../../modulus/home/gtk
       ../../modulus/home/kitty
+      ../../modulus/home/zsh
     ];
   };
 } 
