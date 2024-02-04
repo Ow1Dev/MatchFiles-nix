@@ -41,7 +41,6 @@
 
       ./env.nix
       ./packages
-      ./apps
       ../../modulus/home/nvim
       ../../modulus/home/waybar
       ../../modulus/home/hyprland
