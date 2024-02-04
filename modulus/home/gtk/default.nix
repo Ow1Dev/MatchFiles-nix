@@ -1,8 +1,4 @@
-{ pkgs
-, config
-, inputs
-, ...
-}: {
+{ pkgs, ... }: {
   home.packages = with pkgs; [ glib ]; # gsettings
   xdg.systemDirs.data =
     let
