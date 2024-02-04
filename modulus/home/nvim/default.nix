@@ -19,16 +19,6 @@ in
     lazygit
   ];
 
-  home.file = {
-    ".omnisharp/omnisharp.json".text = ''
-      {
-        "RoslynExtensionsOptions": {
-          "enableDecompilationSupport": true
-        }
-      }
-    '';
-  };
-
   programs.neovim = {
     enable = true;
 
@@ -38,7 +28,6 @@ in
       vimPlugins.nvim-treesitter.withAllGrammars
       vimPlugins.none-ls-nvim
       vimPlugins.rust-tools-nvim
-      vimPlugins.omnisharp-extended-lsp-nvim
 
       # Autocompletion
       vimPlugins.nvim-cmp
@@ -106,7 +95,6 @@ in
       nodePackages."vscode-langservers-extracted"
       nodePackages."yaml-language-server"
       nodePackages."svelte-language-server"
-      omnisharp-roslyn
       rust-analyzer
 
       # formatters
@@ -117,6 +105,8 @@ in
       # tools
       cargo
       gcc
+      nodejs_20
+      nodePackages.pnpm
     ];
 
     package = pkgs.neovim-unwrapped;
