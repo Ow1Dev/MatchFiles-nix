@@ -45,6 +45,7 @@
       ../../modulus/home/nvim
       ../../modulus/home/waybar
       ../../modulus/home/hyprland
+      ../../modulus/home/starship
     ];
   };
 } 
