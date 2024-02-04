@@ -50,6 +50,7 @@
       ../../modulus/home/gtk
       ../../modulus/home/kitty
       ../../modulus/home/zsh
+      ../../modulus/home/tmux
     ];
   };
 } 
