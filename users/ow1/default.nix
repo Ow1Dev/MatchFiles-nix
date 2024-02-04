@@ -40,17 +40,7 @@
       inputs.hyprland.homeManagerModules.default
 
       ./env.nix
-      ../../modulus/home/nvim
-      ../../modulus/home/waybar
-      ../../modulus/home/hyprland
-      ../../modulus/home/starship
-      ../../modulus/home/rofi
-      ../../modulus/home/gtk
-      ../../modulus/home/kitty
-      ../../modulus/home/zsh
-      ../../modulus/home/tmux
-      ../../modulus/home/xdg
-      ../../modulus/home/packages
+      ../../modulus/home
     ];
   };
 } 
