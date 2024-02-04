@@ -1,16 +1,8 @@
-{ config
-, pkgs
-, inputs
-, ...
+{ pkgs, ...
 }: {
   home.packages = with pkgs; [
-    neovim-unwrapped
-    zsh
-    starship
     docker-compose
     unzip
-
     httpie
-    eza
   ];
 }

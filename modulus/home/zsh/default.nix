@@ -74,5 +74,6 @@
     zsh-completions
     zsh-autosuggestions
     zsh-syntax-highlighting
+    eza
   ];
 }

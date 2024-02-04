@@ -1,4 +1,4 @@
-{ config, pkgs, lib, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 {
   users.users.ow1 = {
     isNormalUser = true;
@@ -40,7 +40,6 @@
       inputs.hyprland.homeManagerModules.default
 
       ./env.nix
-      ./packages
       ../../modulus/home/nvim
       ../../modulus/home/waybar
       ../../modulus/home/hyprland
@@ -51,6 +50,7 @@
       ../../modulus/home/zsh
       ../../modulus/home/tmux
       ../../modulus/home/xdg
+      ../../modulus/home/packages
     ];
   };
 } 
