@@ -46,6 +46,7 @@
       ../../modulus/home/waybar
       ../../modulus/home/hyprland
       ../../modulus/home/starship
+      ../../modulus/home/rofi
     ];
   };
 } 

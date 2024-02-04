@@ -1,14 +1,10 @@
-{ config
-, pkgs
-, lib
-, ...
-}:
+{ config, pkgs, ... }:
 let
   rofi-powermenu = pkgs.writeTextFile {
     name = "rofi_powermenu";
     destination = "/bin/powermenu";
     executable = true;
-    text = builtins.readFile ../confs/rofi/powermenu.sh;
+    text = builtins.readFile ./scripts/powermenu.sh;
   };
 in
 {
