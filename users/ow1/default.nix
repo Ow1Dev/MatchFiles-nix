@@ -48,6 +48,7 @@
       ../../modulus/home/starship
       ../../modulus/home/rofi
       ../../modulus/home/gtk
+      ../../modulus/home/kitty
     ];
   };
 } 
