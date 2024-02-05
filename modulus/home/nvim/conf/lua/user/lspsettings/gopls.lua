@@ -1,5 +1,5 @@
 return {
-  filetypes = { "go", "gomod", "gowork", "gotmpl" },
+  filetypes = { "go", "gomod", "gowork", "gotmpl", "gohtmltmpl", "gotexttmpl" },
   settings = {
     gopls = {
       experimentalPostfixCompletions = true,
@@ -9,6 +9,9 @@ return {
         fieldalignment = true,
       },
       staticcheck = true,
+      build = {
+          templateExtensions = { "gohtml", "html", "gotmpl", "tmpl" }
+      }
     },
   },
 }
