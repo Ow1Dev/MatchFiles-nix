@@ -9,9 +9,7 @@ return {
         fieldalignment = true,
       },
       staticcheck = true,
-      build = {
-          templateExtensions = { "gohtml", "html", "gotmpl", "tmpl" }
-      }
+      ["build.templateExtensions"] = { "gohtml", "html", "gotmpl", "tmpl" },
     },
   },
 }
