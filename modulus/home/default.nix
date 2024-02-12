@@ -10,5 +10,6 @@
     ++ [ (import ./zsh) ]
     ++ [ (import ./tmux) ]
     ++ [ (import ./xdg) ]
+    ++ [ (import ./wlogout) ]
     ++ [ (import ./packages) ];
 }
