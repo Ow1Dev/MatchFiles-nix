@@ -83,7 +83,6 @@ in
     extraPackages = with pkgs; [
       # languages
       nodejs
-      rustc
 
       # language servers
       gopls
@@ -103,7 +102,6 @@ in
       stylua
 
       # tools
-      cargo
       gcc
       nodejs_20
       nodePackages.pnpm
