@@ -3,7 +3,7 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    enableAutosuggestions = true;
+    autosuggestion.enable = true;
 
     dotDir = ".config/zsh";
     history.path = "${config.home.homeDirectory}/.config/zsh/.zsh_history";
