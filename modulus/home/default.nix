@@ -1,15 +1,8 @@
 { ... }: {
-  imports = 
-   [ (import ./nvim) ]
-    ++ [ (import ./waybar) ]
-    ++ [ (import ./hyprland) ]
+  imports =
+    [ (import ./nvim) ]
     ++ [ (import ./starship) ]
-    ++ [ (import ./rofi) ]
-    ++ [ (import ./gtk) ]
-    ++ [ (import ./kitty) ]
-    ++ [ (import ./zsh) ]
     ++ [ (import ./tmux) ]
     ++ [ (import ./xdg) ]
-    ++ [ (import ./wlogout) ]
-    ++ [ (import ./packages) ];
+    ++ [ (import ./zsh) ];
 }

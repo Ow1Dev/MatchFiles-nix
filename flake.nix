@@ -3,13 +3,14 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixos-wsl.url = "github:nix-community/NixOS-WSL/main";
     home-manager = {
       url = "github:nix-community/home-manager";
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
   };
 
-  outputs = { nixpkgs, home-manager, hyprland, ... }@inputs:
+  outputs = { nixpkgs, home-manager, nixos-wsl, hyprland, ... }@inputs:
     let
       mkSystem = pkgs: system: hostname:
         pkgs.lib.nixosSystem {
@@ -22,8 +23,14 @@
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
             }
-            hyprland.nixosModules.default
-            { programs.hyprland.enable = true; }
+
+            # TODO: This need to be gone from here
+            nixos-wsl.nixosModules.default
+            {
+              wsl.enable = true;
+            }
+            #hyprland.nixosModules.default
+            #{ programs.hyprland.enable = true; }
           ];
           specialArgs = { inherit inputs; };
         };
@@ -34,6 +41,7 @@
         # Now, defining a new system is can be done in one line
         #                                Architecture   Hostname
         laptop = mkSystem inputs.nixpkgs "x86_64-linux" "laptop";
+        wsl = mkSystem inputs.nixpkgs "x86_64-linux" "wsl";
       };
 
 

@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  imports = [ ./hardware-configuration.nix ../../users/ow1 ];
+  imports = [ ./hardware-configuration.nix ./user.nix ];
 
   services.xserver.desktopManager.xterm.enable = false;
 
@@ -54,7 +54,6 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   programs.dconf.enable = true;
-  programs.zsh.enable = true;
 
   xdg.portal = {
     enable = true;
@@ -86,16 +85,6 @@
 
   # Security 
   security = {
-    sudo.enable = false;
-    doas = {
-      enable = true;
-      extraRules = [{
-        users = [ "ow1" ];
-        keepEnv = true;
-        persist = true;
-      }];
-    };
-
     # Extra security
     protectKernelImage = true;
   };
