@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager";
     };
     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    ow1dev-nvim.url = "github:Ow1Dev/ow1dev.nvim";
   };
 
   outputs = { nixpkgs, home-manager, nixos-wsl, hyprland, ... }@inputs:
