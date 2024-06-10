@@ -1,21 +1,20 @@
-# Edit this configuration file to define what should be installed on
-# your system. Help is available in the configuration.nix(5) man page, on
-# https://search.nixos.org/options and in the NixOS manual (`nixos-help`).
-
-# NixOS-WSL specific options are documented on the NixOS-WSL repository:
-# https://github.com/nix-community/NixOS-WSL
-
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
-  imports = [ ./user.nix ];
+  imports = [
+    ./user.nix 
+    inputs.nixos-wsl.nixosModules.default
+  ];
 
   environment.systemPackages = [
     pkgs.git
   ];
 
+
   nixpkgs.config.allowUnfree = true;
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
+  wsl.enable = true;
   
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

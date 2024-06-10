@@ -25,11 +25,6 @@
               home-manager.useUserPackages = true;
             }
 
-            # TODO: This need to be gone from here
-            nixos-wsl.nixosModules.default
-            {
-              wsl.enable = true;
-            }
             #hyprland.nixosModules.default
             #{ programs.hyprland.enable = true; }
           ];
