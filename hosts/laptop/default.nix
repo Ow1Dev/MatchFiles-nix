@@ -56,6 +56,9 @@
   programs.dconf.enable = true;
 
   xdg.portal = {
+# TODO: This is depecated, so i need to do something about it 
+# https://github.com/flatpak/xdg-desktop-portal/blob/1.18.1/doc/portals.conf.rst.in
+    config.common.default = "*";
     enable = true;
     extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
