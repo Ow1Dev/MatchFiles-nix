@@ -55,6 +55,7 @@
 
       ./env.nix
       ../../modulus/home
+      ../../wm/hyprland
     ];
   };
 } 

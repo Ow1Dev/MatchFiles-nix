@@ -25,8 +25,7 @@
               home-manager.useUserPackages = true;
             }
 
-            #hyprland.nixosModules.default
-            #{ programs.hyprland.enable = true; }
+            #
           ];
           specialArgs = { inherit inputs; };
         };
