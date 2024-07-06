@@ -46,6 +46,7 @@
       inherit (config.system) stateVersion;
       username = "ow1";
       homeDirectory = "/home/${username}";
+      packages = with pkgs; [ doppler ];
     };
 
     _module.args = { inherit inputs; };
